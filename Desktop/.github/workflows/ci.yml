@@ -1,0 +1,16 @@
+name: Continuous Integration
+
+on:
+ push:
+  branches:
+   -main
+
+jobs:
+ builds:
+  runs-on: ubuntu-latest
+   steps:
+   -uses: actions/checkout@v4
+   -name: Display Message
+    run: echo "continuous Integration piepline is successful"
+   -name: list files
+    run: ls
